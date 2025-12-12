@@ -1,0 +1,92 @@
+/* 整體背景和字體 */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #cce7ff; /* 淺藍色背景 */
+  color: #212121; /* 深灰色字體 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 標題 */
+h1 {
+  color: #333;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-top: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* 棋盤容器 */
+.board {
+  width: 320px;
+  height: 320px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  border: 4px solid #4caf50; /* 綠色邊框 */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}
+
+/* 每個格子的樣式 */
+.cell {
+  background-color: #fff;
+  border: 2px solid #ccc; /* 更淺的邊框 */
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif; /* 改為現代感字體 */
+  font-weight: bold;
+  color: #388e3c; /* 綠色字體 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px; /* 圓角效果 */
+  cursor: pointer;
+  transition: all 0.3s ease; /* 平滑過渡效果 */
+}
+
+/* 鼠標懸停時的效果 */
+.cell:hover {
+  background-color: #f1f8e9; /* 淺綠色背景 */
+  transform: scale(1.05); /* 當鼠標懸停時輕微放大 */
+}
+
+/* 控制區域 */
+.controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.controls button:hover {
+  background-color: #388e3c; /* 更深的綠色 */
+  transform: scale(1.1); /* 當鼠標懸停時輕微放大 */
+}
+
+.controls button:active {
+  transform: scale(1); /* 點擊時恢復大小 */
+}
+
+/* 狀態顯示 */
+#status {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #00796b; /* 深青色字體 */
+  margin-top: 20px;
+}
